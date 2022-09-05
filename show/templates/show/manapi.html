@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sentiment Analysis</title>
+    {% load static %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}"
+    />
+  </head>
+  <body>
+    <ul>
+    <li><a href="/">Home</a></li>
+      <li><a href="/web">Web</a></li>
+      <li><a href="/manapi">API</a></li>
+      <li><a href="/login/auth0">Login</a></li>
+      <li><a href="/logout">Logout</a></li>
+    </ul>
+      <br />
+    <div class="content">
+      <h1>API Manual</h1>
+      <p> You can use a GET/POST request to request sentiment Analysis of a text</p>
+      <p> Make sure you hit the "/api/sentiment" endpoint with the "text" parameter and your text as input.</p>
+      <img src="/basicauth/api/n.png" alt="example" style="max-width: 300px; max-height: 400px; align-self: center;">
+      <p>API Limits: Authenticated Users: 1000/day, Non-authenticated Users: 100/day</p>
+      <p> Use /api-token-auth endpoint with POST request containing username and password for authentication.</p>
+    </div>
+    </>
+    <script src="{% static "js/main.js" %}"></script>
+  </body>
+  <script>
+    $(document).mousemove(function(event) {
+    windowWidth = $(document).width();
+    windowHeight = $(document).height();
+    
+    mouseXpercentage = Math.round(event.pageX / windowWidth * 100);
+    mouseYpercentage = Math.round(event.pageY / windowHeight * 100);
+    
+    $('body').css('background', 'radial-gradient(circle at ' + mouseXpercentage + '% ' + mouseYpercentage + '% ,#1c1638, #0d0d1a)');
+  });
+  </script>
+</html>

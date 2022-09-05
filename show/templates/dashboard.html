@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block main_title %}Hello, {{ name|default:'Guest' }}{% endblock %}
+{% block sub_title %}
+{% if name|length == 0 %}
+    <h1>NOT LOGGED IN</h1>
+{% else %}
+    <h1> LOGGED IN AS {{ name }}</h1>
+{% endif %}
+{% endblock %}
+
+
+{% block content %}
+
+{% endblock %}
