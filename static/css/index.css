@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
-
+.app{
+  background-color: black;
+}
 *{
   font-family: 'Lato', sans-serif;
 }
@@ -8,9 +10,7 @@ ul {
   margin: 0;
   padding: 0;
 }
-.app{
-  background-color: black;
-}
+
 html{
   height: 100%;
   width: 100%;
