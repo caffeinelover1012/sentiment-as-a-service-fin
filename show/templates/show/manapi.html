@@ -34,6 +34,9 @@
     <script src="{% static "js/main.js" %}"></script>
   </body>
   <script>
+    $(document).ready(function(){ 
+          $("body").css("background-color","black");
+    }); 
     $(document).mousemove(function(event) {
     windowWidth = $(document).width();
     windowHeight = $(document).height();
