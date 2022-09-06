@@ -15,7 +15,7 @@ import os, django_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 IS_HEROKU = "DYNO" in os.environ
-
+SESSION_COOKIE_SAMESITE = None
 if IS_HEROKU:
     ALLOWED_HOSTS = ["*"]
 else:
